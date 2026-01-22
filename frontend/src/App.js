@@ -161,7 +161,7 @@ function App() {
   };
 
   const deleteProject = async (id) => {
-    if (!confirm('Löschen?')) return;
+    if (!window.confirm('Löschen?')) return;
     try {
       const res = await fetch(`${API_URL}/projects/${id}`, {
         method: 'DELETE',
